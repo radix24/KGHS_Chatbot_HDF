@@ -14,7 +14,7 @@
                     "keyboard":
                     {
                         "type": "buttons",
-                        "buttons": ["오늘", "내일", "모레", "어제"]
+                        "buttons": ["오늘 식단", "내일 식단", "모레 식단", "어제 식단"]
                     }
                 }';
             break;
@@ -69,7 +69,7 @@
                         "keyboard":
                         {
                             "type": "buttons",
-                            "buttons": ["오늘", "내일"]
+                            "buttons": ["오늘 날씨", "내일 날씨"]
                         }
                     }';
             break;
@@ -89,8 +89,170 @@
                     }';
             break;
 
+            case "오늘 식단":
+                echo '
+                    {
+                        "message":
+                        {
+                            "text": "API 준비중입니다. "
+                        },
+                        "keyboard":
+                        {
+                            "type": "buttons",
+                            "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+                        }
+                    }';
+            break;
 
+            case "내일 식단":
+                echo '
+                    {
+                        "message":
+                        {
+                            "text": "API 준비중입니다. "
+                        },
+                        "keyboard":
+                        {
+                            "type": "buttons",
+                            "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+                        }
+                    }';
+            break;
 
+            case "모레 식단":
+                echo '
+                    {
+                        "message":
+                        {
+                            "text": "API 준비중입니다. "
+                        },
+                        "keyboard":
+                        {
+                            "type": "buttons",
+                            "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+                        }
+                    }';
+            break;
+
+            case "어제 식단":
+                echo '
+                    {
+                        "message":
+                        {
+                            "text": "API 준비중입니다. "
+                        },
+                        "keyboard":
+                        {
+                            "type": "buttons",
+                            "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+                        }
+                    }';
+            break;
+
+            case "1학년":
+                echo '
+                    {
+                        "message":
+                        {
+                            "text": "본인의 반을 선택해 주세요. "
+                        },
+                        "keyboard":
+                        {
+                            "type": "buttons",
+                            "buttons": ["1학년 1반", "1학년 2반", "1학년 3반", "1학년 4반", "1학년 5반", "1학년 6반", "1학년 7반", "1학년 8반", "1학년 9반", "1학년 10반", "1학년 11반", "1학년 12반", "1학년 13반", "1학년 14반"]
+                        }
+                    }';
+            break;
+
+            case "2학년":
+                echo '
+                    {
+                        "message":
+                        {
+                            "text": "본인의 반을 선택해 주세요."
+                        },
+                        "keyboard":
+                        {
+                            "type": "buttons",
+                            "buttons": ["2학년 1반", "2학년 2반", "2학년 3반", "2학년 4반", "2학년 5반", "2학년 6반", "2학년 7반", "2학년 8반", "2학년 9반", "2학년 10반", "2학년 11반", "2학년 12반", "2학년 13반", "2학년 14반"]
+                        }
+                    }';
+            break;
+
+            case "3학년":
+                echo '
+                    {
+                        "message":
+                        {
+                            "text": "본인의 반을 선택해 주세요. "
+                        },
+                        "keyboard":
+                        {
+                            "type": "buttons",
+                            "buttons": ["3학년 1반", "3학년 2반", "3학년 3반", "3학년 4반", "3학년 5반", "3학년 6반", "3학년 7반", "3학년 8반", "3학년 9반", "3학년 10반", "3학년 11반", "3학년 12반", "3학년 13반", "3학년 14반"]
+                        }
+                    }';
+            break;  //반별 추가는 나중에- 코드 길이 길어짐 방지
+
+            case "정문":
+                echo '
+                    {
+                        "message":
+                        {
+                            "text": "어느 정류장의 정보가 궁금하신가요? "
+                        },
+                        "keyboard":
+                        {
+                            "type": "buttons",
+                            "buttons": ["정류장A", "정류장B", "정류장 C"]
+                        }
+                    }';
+            break;
+
+            case "후문":
+                echo '
+                    {
+                        "message":
+                        {
+                            "text": "어느 정류장의 정보가 궁금하신가요? "
+                        },
+                        "keyboard":
+                        {
+                            "type": "buttons",
+                            "buttons": ["정류장A", "정류장B", "정류장 C"]
+                        }
+                    }';
+            break;
+
+            case "오늘 날씨":
+                echo '
+                    {
+                        "message":
+                        {
+                            "text": "API 준비중입니다. "
+                        },
+                        "keyboard":
+                        {
+                            "type": "buttons",
+                            "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+                        }
+                    }';
+            break;
+
+            case "내일 날씨":
+                echo '
+                    {
+                        "message":
+                        {
+                            "text": "API 준비중입니다. "
+                        },
+                        "keyboard":
+                        {
+                            "type": "buttons",
+                            "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+                        }
+                    }';
+            break;
 
         default:
             echo '
