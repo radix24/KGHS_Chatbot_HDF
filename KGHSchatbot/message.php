@@ -1,8 +1,6 @@
 <?php
-include("functions/meal2.php");
-include("functions/meal3.php");
-include("functions/weather.php");
-include("functions/timetable.php");
+    include '/function/menu2.php';
+    include '/function/menu3.php';
     $data = json_decode(file_get_contents('php://input'), true);
     $content = $data["content"];
     switch($content)
@@ -51,7 +49,7 @@ include("functions/timetable.php");
             break;
             case "오늘 증식":  //중식 영역 시작
             $menu2 = getmeal2(0);
-                echo <<< EOD
+                echo
                     {
                         "message":
                         {
@@ -62,11 +60,11 @@ include("functions/timetable.php");
                             "type": "buttons",
                             "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
                         }
-                    } EOD;
+                    }
             break;
             case "내일 중식":
             $menu2 = getmeal2(1);
-                echo <<< EOD
+                echo
                     {
                         "message":
                         {
@@ -77,11 +75,11 @@ include("functions/timetable.php");
                             "type": "buttons",
                             "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
                         }
-                    } EOD;
+                    }
             break;
             case "모레 중식":
             $menu2 = getmeal2(2);
-                echo <<< EOD
+                echo
                     {
                         "message":
                         {
@@ -92,26 +90,28 @@ include("functions/timetable.php");
                             "type": "buttons",
                             "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
                         }
-                    } EOD;
+                    }
             break; //중식 영역 종료
             case "오늘 석식":  //석식 영역 시작
             $menu3 = getmeal3(0);
-                echo <<< EOD
+                echo
                     {
                         "message":
                         {
+
                             "text": "$menu3[0] . "\\n오늘 석식 정보입니다.\\n\\n" . $menu3[1], 0"
+
                         },
                         "keyboard":
                         {
                             "type": "buttons",
                             "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
                         }
-                    } EOD;
+                    }
             break;
             case "내일 석식":
             $menu3 = getmeal3(1);
-                echo <<< EOD
+                echo
                     {
                         "message":
                         {
@@ -122,11 +122,11 @@ include("functions/timetable.php");
                             "type": "buttons",
                             "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
                         }
-                    } EOD;
+                    }
             break;
             case "모레 석식":
             $menu3 = getmeal3(2);
-                echo <<< EOD
+                echo
                     {
                         "message":
                         {
@@ -137,8 +137,9 @@ include("functions/timetable.php");
                             "type": "buttons",
                             "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
                         }
-                    } EOD;
+                    }
             break;  //석식 영역 종료
+
 
 //식단 영역 종료
 //시간표 영역 시작
