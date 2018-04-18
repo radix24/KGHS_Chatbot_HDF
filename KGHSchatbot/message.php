@@ -1,7 +1,10 @@
 <?php
+include("functions/meal2.php");
+include("functions/meal3.php");
+include("functions/weather.php");
+include("functions/timetable.php");
     $data = json_decode(file_get_contents('php://input'), true);
     $content = $data["content"];
-
     switch($content)
     {
             case "급식 식단":
@@ -14,69 +17,131 @@
                     "keyboard":
                     {
                         "type": "buttons",
-                        "buttons": ["오늘 식단", "내일 식단", "모레 식단", "어제 식단"]
+                        "buttons": ["중식", "석식"]
                     }
                 }';
-            break;            
-            case "오늘 식단":
+            break;
+            case "중식":
                 echo '
                     {
                         "message":
                         {
-                            "text": "API 준비중입니다. "
+                            "text": ""
+                        },
+                        "keyboard":
+                        {
+                            "type": "buttons",
+                            "buttons": ["오늘 중식", "내일 중식", "모레 중식"]
+                        }
+                    }';
+            break;
+            case "석식":
+                echo '
+                    {
+                        "message":
+                        {
+                            "text": ""
+                        },
+                        "keyboard":
+                        {
+                            "type": "buttons",
+                            "buttons": ["오늘 석식", "내일 석식", "모레 석식"]
+                        }
+                    }';
+            break;
+            case "오늘 증식":  //중식 영역 시작
+            $menu2 = getmeal2(0);
+                echo <<< EOD
+                    {
+                        "message":
+                        {
+                            "text": "$meal2[0] . "\\n오늘 중식 정보입니다.\\n\\n" . $meal2[1], 0"
                         },
                         "keyboard":
                         {
                             "type": "buttons",
                             "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
                         }
-                    }';
+                    } EOD;
             break;
-            case "내일 식단":
-                echo '
+            case "내일 중식":
+            $menu2 = getmeal2(1);
+                echo <<< EOD
                     {
                         "message":
                         {
-                            "text": "API 준비중입니다. "
+                            "text": "$meal2[0] . "\\n내일 중식 정보입니다.\\n\\n" . $meal2[1], 0"
                         },
                         "keyboard":
                         {
                             "type": "buttons",
                             "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
                         }
-                    }';
+                    } EOD;
             break;
-            case "모레 식단":
-                echo '
+            case "모레 중식":
+            $menu2 = getmeal2(2);
+                echo <<< EOD
                     {
                         "message":
                         {
-                            "text": "API 준비중입니다. "
+                            "text": "$meal2[0] . "\\n모레 중식 정보입니다.\\n\\n" . $meal2[1], 0"
                         },
                         "keyboard":
                         {
                             "type": "buttons",
                             "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
                         }
-                    }';
-            break;
-            case "어제 식단":
-                echo '
+                    } EOD;
+            break; //중식 영역 종료
+            case "오늘 석식":  //석식 영역 시작
+            $menu3 = getmeal3(0);
+                echo <<< EOD
                     {
                         "message":
                         {
-                            "text": "API 준비중입니다. "
+                            "text": "$menu3[0] . "\\n오늘 석식 정보입니다.\\n\\n" . $menu3[1], 0"
                         },
                         "keyboard":
                         {
                             "type": "buttons",
                             "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
                         }
-                    }';
+                    } EOD;
             break;
-            
+            case "내일 석식":
+            $menu3 = getmeal3(1);
+                echo <<< EOD
+                    {
+                        "message":
+                        {
+                            "text": "$menu3[0] . "\\n내일 석식 정보입니다.\\n\\n" . $menu3[1], 0"
+                        },
+                        "keyboard":
+                        {
+                            "type": "buttons",
+                            "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+                        }
+                    } EOD;
+            break;
+            case "모레 석식":
+            $menu3 = getmeal3(2);
+                echo <<< EOD
+                    {
+                        "message":
+                        {
+                            "text": "$menu3[0] . "\\모레 석식 정보입니다.\\n\\n" . $menu3[1], 0"
+                        },
+                        "keyboard":
+                        {
+                            "type": "buttons",
+                            "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+                        }
+                    } EOD;
+            break;  //석식 영역 종료
+
 //식단 영역 종료
-//시간표 영역 시작   
+//시간표 영역 시작
 
             case "시간표":
                 echo '
@@ -91,7 +156,7 @@
                         "buttons": ["1학년", "2학년", "3학년"]
                     }
                 }';
-            break;            
+            break;
             case "1학년":
                 echo '
                     {
@@ -134,10 +199,10 @@
                         }
                     }';
             break;  //반별 추가는 나중에- 코드 길이 길어짐 방지
-            
+
 //시간표 영역 종료
 //학사력 영역 시작
-            
+
             case "학사력":
                 echo '
                   {
@@ -147,7 +212,7 @@
                       },
                 }';
             break;
-            
+
 //학사력 영역 종료
 //영역 시작
 
@@ -193,7 +258,7 @@
                         }
                     }';
             break;
-            
+
 //교통정보 영역 종료
 //날씨 영역 시작
 
@@ -210,7 +275,7 @@
                             "buttons": ["오늘 날씨", "내일 날씨"]
                         }
                     }';
-            break;            
+            break;
             case "오늘 날씨":
                 echo '
                     {
@@ -239,7 +304,7 @@
                         }
                     }';
             break;
-            
+
 //날씨 영역 종료
 //개발자 영역 시작
 
@@ -257,7 +322,7 @@
                         }
                     }';
             break;
-            
+
 //개발자 영역 종료
 //일반기기능종료
             case "돌아가기":
@@ -273,8 +338,8 @@
                             "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
                         }
                     }';
-            break; 
-            
+            break;
+
         default:
             echo '
                 {
