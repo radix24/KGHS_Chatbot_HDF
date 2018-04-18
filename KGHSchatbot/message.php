@@ -53,7 +53,7 @@
                     {
                         "message":
                         {
-                            "text": "$meal2[0] . "\\n오늘 중식 정보입니다.\\n\\n" . $meal2[1], 0"
+                            "text": "$menu2[0] . "\\n오늘 중식 정보입니다.\\n\\n" . $menu2[1], 0"
                         },
                         "keyboard":
                         {
@@ -68,7 +68,7 @@
                     {
                         "message":
                         {
-                            "text": "$meal2[0] . "\\n내일 중식 정보입니다.\\n\\n" . $meal2[1], 0"
+                            "text": "$menu2[0] . "\\n내일 중식 정보입니다.\\n\\n" . $menu2[1], 0"
                         },
                         "keyboard":
                         {
@@ -83,7 +83,7 @@
                     {
                         "message":
                         {
-                            "text": "$meal2[0] . "\\n모레 중식 정보입니다.\\n\\n" . $meal2[1], 0"
+                            "text": "$menu2[0] . "\\n모레 중식 정보입니다.\\n\\n" . $menu2[1], 0"
                         },
                         "keyboard":
                         {
