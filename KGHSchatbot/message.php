@@ -3,24 +3,19 @@
     $content = $data["content"];
     include("./functions/menu2.php");
     include("./functions/menu3.php");
-    if ( strpos($content, "대화 시작") !== false ) {
-        echo '{
-              "message" :
-              {
-                "text" : "안녕! 나는 은여울중학교 급식봇이야! ><",
-                "photo": {
-                    "url": "http://silvermealbot.dothome.co.kr/images/logo.jpg",
-                    "width": 600,
-                    "height": 600
-                }
-              },
-              "keyboard" :
-              {
-                "type" : "buttons",
-                "buttons" : ["급식", "정보"]
-              }
-            }';
-    }
+    if ( strpos($content, "개발자") !== false ) {
+      echo '{
+            "message" :
+            {
+              "text" : "이 채팅봇은 (2018년 현재) 1-8 조현서가 개발했어 :) 개선사항이나 기능을 추가하고 싶다면 언제든지 E-Mail webmaster@inpase.io나 페이스북 메신저로 연락 줘!"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+            }
+      }';
+      }
     else if ( strpos($content, "급식 식단") !== false ) {
         echo '{
               "message" :
@@ -137,6 +132,58 @@ EOD;
           }
     }';
 }
+    else if ( strpos($content, "시간표") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "개발중인 기능이에요 :) 잠시만 기다려주세요!"
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              }
+            }';
+    }
+    else if ( strpos($content, "학사력") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "개발중인 기능이에요 :) 잠시만 기다려주세요!"
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              }
+            }';
+    }
+    else if ( strpos($content, "교통정보") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "개발중인 기능이에요 :) 잠시만 기다려주세요!"
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              }
+            }';
+    }
+    else if ( strpos($content, "날씨") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "개발중인 기능이에요 :) 잠시만 기다려주세요!"
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              }
+            }';
+    }
 else{
     echo '{
           "message" :
