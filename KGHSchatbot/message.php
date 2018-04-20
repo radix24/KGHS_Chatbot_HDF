@@ -124,6 +124,32 @@ echo <<< EOD
     }
 EOD;
     }
+    else if ( strpos($content, "돌아가기") !== false ) {
+    echo '{
+          "message" :
+          {
+            "text" : "처음으로 돌아왔습니다. 메뉴를 다시 선택해 주세요. "
+          },
+          "keyboard" :
+          {
+            "type" : "buttons",
+            "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+          }
+    }';
+}
+else{
+    echo '{
+          "message" :
+          {
+            "text" : "지금 말한게 뭔지 모르겠는걸 ㅠ 아래 버튼 중에서 다시 선택해볼래?"
+          },
+          "keyboard" :
+          {
+            "type" : "buttons",
+            "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+          }
+    }';
+}
 
 
 
