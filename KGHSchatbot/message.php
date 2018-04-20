@@ -1,6 +1,7 @@
 <?php
     $data = json_decode(file_get_contents('php://input'), true);
     $content = $data["content"];
+    include("./functions/menu2.php");
     if ( strpos($content, "대화 시작") !== false ) {
         echo '{
               "message" :
@@ -28,17 +29,16 @@
               "keyboard" :
               {
                 "type" : "buttons",
-                "buttons" : ["오늘 급식", "내일 급식", "모레 급식", "돌아가기"]
+                "buttons" : ["오늘 중식", "오늘 석식", "내일 중식", "내일 석식", "모레 중식", "모레 석식", "돌아가기"]
               }
             }';
     }
-    else if ( strpos($content, "오늘 급식") !== false ) {
+    else if ( strpos($content, "오늘 중식") !== false ) {
         $meal2 = getmeal2(0);
-        $meal3 = getmeal2(0);
 echo <<< EOD
     {
         "message": {
-            "text": "$meal2[0]\\n오늘 중식 식단\\n\\n$meal2[1] \\n $meal3[0]\\n오늘 석식 식단\\n\\n$meal3[1]"
+            "text": "$meal2[0]\\n경기고등학교 오늘 중식 식단\\n\\n$meal2[1]"
         },
         "keyboard" :
         {
@@ -48,13 +48,12 @@ echo <<< EOD
     }
 EOD;
     }
-    else if ( strpos($content, "오늘 급식") !== false ) {
+    else if ( strpos($content, "내일 중식") !== false ) {
         $meal2 = getmeal2(1);
-        $meal3 = getmeal2(1);
 echo <<< EOD
     {
         "message": {
-            "text": "$meal2[0]\\n내일 중식 식단\\n\\n$meal2[1] \\n $meal3[0]\\n내일 석식 식단\\n\\n$meal3[1]"
+            "text": "$meal2[0]\\n경기고등학교 내일 중식 식단\\n\\n$meal2[1]"
         },
         "keyboard" :
         {
@@ -64,13 +63,12 @@ echo <<< EOD
     }
 EOD;
     }
-    else if ( strpos($content, "모레 급식") !== false ) {
+    else if ( strpos($content, "모레 중식") !== false ) {
         $meal2 = getmeal2(2);
-        $meal3 = getmeal2(2);
 echo <<< EOD
     {
         "message": {
-            "text": "$meal2[0]\\n내일 중식 식단\\n\\n$meal2[1] \\n $meal3[0]\\n내일 석식 식단\\n\\n$meal3[1]"
+            "text": "$meal2[0]\\n경기고등학교 모레 중식 식단\\n\\n$meal2[1]"
         },
         "keyboard" :
         {
