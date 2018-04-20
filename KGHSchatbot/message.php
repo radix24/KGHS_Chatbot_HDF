@@ -65,8 +65,8 @@ echo <<< EOD
 EOD;
     }
     else if ( strpos($content, "모레 급식") !== false ) {
-        $meal2 = getmeal2(1);
-        $meal3 = getmeal2(1);
+        $meal2 = getmeal2(2);
+        $meal3 = getmeal2(2);
 echo <<< EOD
     {
         "message": {
@@ -81,6 +81,6 @@ echo <<< EOD
 EOD;
     }
 
-  
+
 
 ?>
