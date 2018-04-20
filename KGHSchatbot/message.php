@@ -2,6 +2,7 @@
     $data = json_decode(file_get_contents('php://input'), true);
     $content = $data["content"];
     include("./functions/menu2.php");
+    include("./functions/menu3.php");
     if ( strpos($content, "대화 시작") !== false ) {
         echo '{
               "message" :
@@ -78,6 +79,52 @@ echo <<< EOD
     }
 EOD;
     }
+    else if ( strpos($content, "오늘 석식") !== false ) {
+        $meal3 = getmeal3(0);
+echo <<< EOD
+    {
+        "message": {
+            "text": "$meal3[0]\\n경기고등학교 오늘 석식 식단\\n\\n$meal3[1]"
+        },
+        "keyboard" :
+        {
+          "type" : "buttons",
+          "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+       }
+    }
+EOD;
+    }
+    else if ( strpos($content, "내일 석식") !== false ) {
+        $meal3 = getmeal3(1);
+echo <<< EOD
+    {
+        "message": {
+            "text": "$meal3[0]\\n경기고등학교 내일 석식 식단\\n\\n$meal3[1]"
+        },
+        "keyboard" :
+        {
+          "type" : "buttons",
+          "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+       }
+    }
+EOD;
+    }
+    else if ( strpos($content, "모레 석식") !== false ) {
+        $meal3 = getmeal3(2);
+echo <<< EOD
+    {
+        "message": {
+            "text": "$meal3[0]\\n경기고등학교 모레 석식 식단\\n\\n$meal3[1]"
+        },
+        "keyboard" :
+        {
+          "type" : "buttons",
+          "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+       }
+    }
+EOD;
+    }
+
 
 
 
