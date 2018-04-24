@@ -2,6 +2,41 @@
 function getmeal3($days)
 {
   $date = date("Y.m.d", strtotime("+$days days"));
+  if ($date == "2018.04.25"){
+   $final = "오늘은 중간고사 첫째날이에요! 급식은 없지만 다들 시험 화이팅 :) \\n";
+   $return = array($date, $final); // 해당날짜, 급식메뉴
+   return $return;
+ }
+ if ($date == "2018.04.26"){
+  $final = "오늘은 중간고사 둘째날이에요! 급식은 없지만 다들 시험 화이팅 :) \\n";
+  $return = array($date, $final); // 해당날짜, 급식메뉴
+  return $return;
+}
+if ($date == "2018.04.27"){
+ $final = "오늘은 중간고사 셋째날이에요! 급식은 없지만 다들 시험 화이팅 :) \\n";
+ $return = array($date, $final); // 해당날짜, 급식메뉴
+ return $return;
+}
+if ($date == "2018.04.28"){
+ $final = "오늘은 중간고사 기간이에요! 2일차 시험까지 열심히 달려왔으니 토요일에는 쉬어가면서 다음주 시험을 위한 체력보충! 급식은 없지만 다들 시험 화이팅 :) \\n";
+ $return = array($date, $final); // 해당날짜, 급식메뉴
+ return $return;
+}
+if ($date == "2018.04.29"){
+ $final = "오늘은 중간고사 기간이에요! 급식은 없지만 다들 내일 4일차 시험도 다들 화이팅 :) \\n";
+ $return = array($date, $final); // 해당날짜, 급식메뉴
+ return $return;
+}
+if ($date == "2018.04.30"){
+ $final = "오늘은 중간고사 넷째날이에요! 급식은 없지만 다들 시험 화이팅 :) \\n";
+ $return = array($date, $final); // 해당날짜, 급식메뉴
+ return $return;
+}
+if ($date == "2018.05.01"){
+ $final = "오늘은 중간고사 다섯째날이에요! 급식은 없지만 다들 시험 화이팅 :) \\n";
+ $return = array($date, $final); // 해당날짜, 급식메뉴
+ return $return;
+}
   header("Content-type: application/json; charset=UTF-8");
   require("Snoopy.class.php");
   $URL = "https://stu.sen.go.kr/sts_sci_md01_001.do?schulCode=B100000375&&schulCrseScCode=4&schMmealScCode=3&schYmd=" . $date;
