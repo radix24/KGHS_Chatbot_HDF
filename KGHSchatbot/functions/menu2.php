@@ -3,17 +3,17 @@ function getmeal2($days)
 {
   $date = date("Y.m.d", strtotime("+$days days"));
   if ($date == "2018.04.25"){
-   $final = "오늘은 중간고사 첫째날이에요! 급식은 없지만 다들 시험 화이팅 :) \\n";
+   $final = "오늘은 중간고사 첫째날이에요! 급식은 없지만 영양보충해서 힘내고 다들 시험 화이팅 :) \\n";
    $return = array($date, $final); // 해당날짜, 급식메뉴
    return $return;
  }
  if ($date == "2018.04.26"){
-  $final = "오늘은 중간고사 둘째날이에요! 급식은 없지만 다들 시험 화이팅 :) \\n";
+  $final = "오늘은 중간고사 둘째날이에요! 급식은 없지만 영양보충해서 힘내고 다들 시험 화이팅 :) \\n";
   $return = array($date, $final); // 해당날짜, 급식메뉴
   return $return;
 }
 if ($date == "2018.04.27"){
- $final = "오늘은 중간고사 셋째날이에요! 급식은 없지만 다들 시험 화이팅 :) \\n";
+ $final = "오늘은 중간고사 셋째날이에요! 급식은 없지만 영양보충해서 힘내고 다들 시험 화이팅 :) \\n";
  $return = array($date, $final); // 해당날짜, 급식메뉴
  return $return;
 }
@@ -28,12 +28,12 @@ if ($date == "2018.04.29"){
  return $return;
 }
 if ($date == "2018.04.30"){
- $final = "오늘은 중간고사 넷째날이에요! 급식은 없지만 다들 시험 화이팅 :) \\n";
+ $final = "오늘은 중간고사 넷째날이에요! 급식은 없지만 영양보충해서 힘내고 다들 시험 화이팅 :) \\n";
  $return = array($date, $final); // 해당날짜, 급식메뉴
  return $return;
 }
 if ($date == "2018.05.01"){
- $final = "오늘은 중간고사 다섯째날이에요! 급식은 없지만 다들 시험 화이팅 :) \\n";
+ $final = "오늘은 중간고사 다섯째날이에요! 급식은 없지만 영양보충해서 힘내고 다들 시험 화이팅 :) \\n";
  $return = array($date, $final); // 해당날짜, 급식메뉴
  return $return;
 }
