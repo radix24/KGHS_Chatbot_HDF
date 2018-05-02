@@ -136,12 +136,51 @@ EOD;
         echo '{
               "message" :
               {
-                "text" : "개발중인 기능이에요 :) 잠시만 기다려주세요!"
+                "text" : "메뉴 눌러도 정상출력되지 않을 수 있습니다. 개발중입니다. "
               },
               "keyboard" :
               {
                 "type" : "buttons",
-                "buttons" : ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+                "buttons" : ["1학년", "2학년", "3학년"]
+              }
+            }';
+    }
+    else if ( strpos($content, "1학년") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "메뉴 눌러도 정상출력되지 않을 수 있습니다. 개발중입니다. "
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["1학년 1반", "1학년 2반", "1학년 3반", "1학년 4반", "1학년 5반", "1학년 6반", "1학년 7반", "1학년 8반", "1학년 9반", "1학년 10반", "1학년 11반", "1학년 12반", "1학년 13반", "1학년 14반"]
+              }
+            }';
+    }
+    else if ( strpos($content, "2학년") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "메뉴 눌러도 정상출력되지 않을 수 있습니다. 개발중입니다. "
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["2학년 1반", "2학년 2반", "2학년 3반", "2학년 4반", "2학년 5반", "2학년 6반", "2학년 7반", "2학년 8반", "2학년 9반", "2학년 10반", "2학년 11반", "2학년 12반", "2학년 13반", "2학년 14반"]
+              }
+            }';
+    }
+    else if ( strpos($content, "3학년") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "메뉴 눌러도 정상출력되지 않을 수 있습니다. 개발중입니다. "
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["3학년 1반", "3학년 2반", "3학년 3반", "3학년 4반", "3학년 5반", "3학년 6반", "3학년 7반", "3학년 8반", "3학년 9반", "3학년 10반", "3학년 11반", "3학년 12반", "3학년 13반", "3학년 14반"]
               }
             }';
     }
@@ -183,6 +222,552 @@ EOD;
                 "buttons" : ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
               }
             }';
+    }
+    elseif ( strpos($content, "1학년 1반") !== false ) {
+      echo '{
+            "message" :
+            {
+              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+            }
+      }';
+    }
+    elseif ( strpos($content, "1학년 2반") !== false ) {
+      echo '{
+            "message" :
+            {
+              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+            }
+      }';
+    }
+    elseif ( strpos($content, "1학년 3반") !== false ) {
+      echo '{
+            "message" :
+            {
+              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+            }
+      }';
+    }
+    elseif ( strpos($content, "1학년 4반") !== false ) {
+      echo '{
+            "message" :
+            {
+              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+            }
+      }';
+    }
+    elseif ( strpos($content, "1학년 5반") !== false ) {
+      echo '{
+            "message" :
+            {
+              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+            }
+      }';
+    }
+    elseif ( strpos($content, "1학년 6반") !== false ) {
+      echo '{
+            "message" :
+            {
+              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+            }
+      }';
+    }
+    elseif ( strpos($content, "1학년 7반") !== false ) {
+      echo '{
+            "message" :
+            {
+              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+            }
+      }';
+    }
+    elseif ( strpos($content, "1학년 8반") !== false ) {
+      echo '{
+            "message" :
+            {
+              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+            }
+      }';
+    }
+    elseif ( strpos($content, "1학년 9반") !== false ) {
+      echo '{
+            "message" :
+            {
+              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+            }
+      }';
+    }
+    elseif ( strpos($content, "1학년 10반") !== false ) {
+      echo '{
+            "message" :
+            {
+              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+            }
+      }';
+    }
+    elseif ( strpos($content, "1학년 11반") !== false ) {
+      echo '{
+            "message" :
+            {
+              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+            }
+      }';
+    }
+    elseif ( strpos($content, "1학년 12반") !== false ) {
+      echo '{
+            "message" :
+            {
+              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+            }
+      }';
+    }
+    elseif ( strpos($content, "1학년 13반") !== false ) {
+      echo '{
+            "message" :
+            {
+              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+            }
+      }';
+    }
+    elseif ( strpos($content, "1학년 14반") !== false ) {
+      echo '{
+            "message" :
+            {
+              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+            }
+      }';
+    }
+    elseif ( strpos($content, "2학년 1반") !== false ) {
+      echo '{
+            "message" :
+            {
+              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+            }
+      }';
+    }
+    elseif ( strpos($content, "2학년 2반") !== false ) {
+      echo '{
+            "message" :
+            {
+              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+            }
+      }';
+    }
+    elseif ( strpos($content, "2학년 3반") !== false ) {
+      echo '{
+            "message" :
+            {
+              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+            }
+      }';
+    }
+    elseif ( strpos($content, "2학년 4반") !== false ) {
+      echo '{
+            "message" :
+            {
+              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+            }
+      }';
+    }
+    elseif ( strpos($content, "2학년 5반") !== false ) {
+      echo '{
+            "message" :
+            {
+              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+            }
+      }';
+    }
+    elseif ( strpos($content, "2학년 6반") !== false ) {
+      echo '{
+            "message" :
+            {
+              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+            }
+      }';
+    }
+    elseif ( strpos($content, "2학년 7반") !== false ) {
+      echo '{
+            "message" :
+            {
+              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+            }
+      }';
+    }
+    elseif ( strpos($content, "2학년 8반") !== false ) {
+      echo '{
+            "message" :
+            {
+              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+            }
+      }';
+    }
+    elseif ( strpos($content, "2학년 9반") !== false ) {
+      echo '{
+            "message" :
+            {
+              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+            }
+      }';
+    }
+    elseif ( strpos($content, "2학년 10반") !== false ) {
+      echo '{
+            "message" :
+            {
+              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+            }
+      }';
+    }
+    elseif ( strpos($content, "2학년 11반") !== false ) {
+      echo '{
+            "message" :
+            {
+              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+            }
+      }';
+    }
+    elseif ( strpos($content, "2학년 12반") !== false ) {
+      echo '{
+            "message" :
+            {
+              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+            }
+      }';
+    }
+    elseif ( strpos($content, "2학년 13반") !== false ) {
+      echo '{
+            "message" :
+            {
+              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+            }
+      }';
+    }
+    elseif ( strpos($content, "2학년 14반") !== false ) {
+      echo '{
+            "message" :
+            {
+              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+            }
+      }';
+    }
+    elseif ( strpos($content, "3학년 1반") !== false ) {
+      echo '{
+            "message" :
+            {
+              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+            }
+      }';
+    }
+    elseif ( strpos($content, "3학년 2반") !== false ) {
+      echo '{
+            "message" :
+            {
+              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+            }
+      }';
+    }
+    elseif ( strpos($content, "3학년 3반") !== false ) {
+      echo '{
+            "message" :
+            {
+              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+            }
+      }';
+    }
+    elseif ( strpos($content, "3학년 4반") !== false ) {
+      echo '{
+            "message" :
+            {
+              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+            }
+      }';
+    }
+    elseif ( strpos($content, "3학년 5반") !== false ) {
+      echo '{
+            "message" :
+            {
+              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+            }
+      }';
+    }
+    elseif ( strpos($content, "3학년 6반") !== false ) {
+      echo '{
+            "message" :
+            {
+              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+            }
+      }';
+    }
+    elseif ( strpos($content, "3학년 7반") !== false ) {
+      echo '{
+            "message" :
+            {
+              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+            }
+      }';
+    }
+    elseif ( strpos($content, "3학년 8반") !== false ) {
+      echo '{
+            "message" :
+            {
+              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+            }
+      }';
+    }
+    elseif ( strpos($content, "3학년 9반") !== false ) {
+      echo '{
+            "message" :
+            {
+              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+            }
+      }';
+    }
+    elseif ( strpos($content, "3학년 10반") !== false ) {
+      echo '{
+            "message" :
+            {
+              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+            }
+      }';
+    }
+    elseif ( strpos($content, "3학년 11반") !== false ) {
+      echo '{
+            "message" :
+            {
+              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+            }
+      }';
+    }
+    elseif ( strpos($content, "3학년 12반") !== false ) {
+      echo '{
+            "message" :
+            {
+              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+            }
+      }';
+    }
+    elseif ( strpos($content, "3학년 13반") !== false ) {
+      echo '{
+            "message" :
+            {
+              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+            }
+      }';
+    }
+    elseif ( strpos($content, "3학년 14반") !== false ) {
+      echo '{
+            "message" :
+            {
+              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+            }
+      }';
     }
 else{
     echo '{
