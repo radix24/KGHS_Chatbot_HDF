@@ -3,6 +3,8 @@
     $content = $data["content"];
     include("./functions/menu2.php");
     include("./functions/menu3.php");
+    include("./functions/weather1.php");
+    include("./functions/calander.php");
     if ( strpos($content, "개발자") !== false ) {
       echo '{
             "message" :
@@ -142,84 +144,6 @@ EOD;
               {
                 "type" : "buttons",
                 "buttons" : ["1학년", "2학년", "3학년"]
-              }
-            }';
-    }
-    else if ( strpos($content, "1학년") !== false ) {
-        echo '{
-              "message" :
-              {
-                "text" : "메뉴 눌러도 정상출력되지 않을 수 있습니다. 개발중입니다. "
-              },
-              "keyboard" :
-              {
-                "type" : "buttons",
-                "buttons" : ["1학년 1반", "1학년 2반", "1학년 3반", "1학년 4반", "1학년 5반", "1학년 6반", "1학년 7반", "1학년 8반", "1학년 9반", "1학년 10반", "1학년 11반", "1학년 12반", "1학년 13반", "1학년 14반"]
-              }
-            }';
-    }
-    else if ( strpos($content, "2학년") !== false ) {
-        echo '{
-              "message" :
-              {
-                "text" : "메뉴 눌러도 정상출력되지 않을 수 있습니다. 개발중입니다. "
-              },
-              "keyboard" :
-              {
-                "type" : "buttons",
-                "buttons" : ["2학년 1반", "2학년 2반", "2학년 3반", "2학년 4반", "2학년 5반", "2학년 6반", "2학년 7반", "2학년 8반", "2학년 9반", "2학년 10반", "2학년 11반", "2학년 12반", "2학년 13반", "2학년 14반"]
-              }
-            }';
-    }
-    else if ( strpos($content, "3학년") !== false ) {
-        echo '{
-              "message" :
-              {
-                "text" : "메뉴 눌러도 정상출력되지 않을 수 있습니다. 개발중입니다. "
-              },
-              "keyboard" :
-              {
-                "type" : "buttons",
-                "buttons" : ["3학년 1반", "3학년 2반", "3학년 3반", "3학년 4반", "3학년 5반", "3학년 6반", "3학년 7반", "3학년 8반", "3학년 9반", "3학년 10반", "3학년 11반", "3학년 12반", "3학년 13반", "3학년 14반"]
-              }
-            }';
-    }
-    else if ( strpos($content, "학사력") !== false ) {
-        echo '{
-              "message" :
-              {
-                "text" : "개발중인 기능이에요 :) 잠시만 기다려주세요!"
-              },
-              "keyboard" :
-              {
-                "type" : "buttons",
-                "buttons" : ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
-              }
-            }';
-    }
-    else if ( strpos($content, "교통정보") !== false ) {
-        echo '{
-              "message" :
-              {
-                "text" : "개발중인 기능이에요 :) 잠시만 기다려주세요!"
-              },
-              "keyboard" :
-              {
-                "type" : "buttons",
-                "buttons" : ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
-              }
-            }';
-    }
-    else if ( strpos($content, "날씨") !== false ) {
-        echo '{
-              "message" :
-              {
-                "text" : "개발중인 기능이에요 :) 잠시만 기다려주세요!"
-              },
-              "keyboard" :
-              {
-                "type" : "buttons",
-                "buttons" : ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
               }
             }';
     }
@@ -768,6 +692,181 @@ EOD;
               "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
             }
       }';
+    }
+    else if ( strpos($content, "1학년") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "메뉴 눌러도 정상출력되지 않을 수 있습니다. 개발중입니다. "
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["1학년 1반", "1학년 2반", "1학년 3반", "1학년 4반", "1학년 5반", "1학년 6반", "1학년 7반", "1학년 8반", "1학년 9반", "1학년 10반", "1학년 11반", "1학년 12반", "1학년 13반", "1학년 14반"]
+              }
+            }';
+    }
+    else if ( strpos($content, "2학년") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "메뉴 눌러도 정상출력되지 않을 수 있습니다. 개발중입니다. "
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["2학년 1반", "2학년 2반", "2학년 3반", "2학년 4반", "2학년 5반", "2학년 6반", "2학년 7반", "2학년 8반", "2학년 9반", "2학년 10반", "2학년 11반", "2학년 12반", "2학년 13반", "2학년 14반"]
+              }
+            }';
+    }
+    else if ( strpos($content, "3학년") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "메뉴 눌러도 정상출력되지 않을 수 있습니다. 개발중입니다. "
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["3학년 1반", "3학년 2반", "3학년 3반", "3학년 4반", "3학년 5반", "3학년 6반", "3학년 7반", "3학년 8반", "3학년 9반", "3학년 10반", "3학년 11반", "3학년 12반", "3학년 13반", "3학년 14반"]
+              }
+            }';
+    }
+    if ( strpos($content, "이번달 학사일정") !== false ) {
+      $final = cal(0);
+      $func = $final[0] . $final[1] . $final[2] . $final[3] . $final[4] . $final[5] . $final[6] . $final[7] . $final[8] . $final[9] . $final[10] . $final[11] . $final[12] . $final[13] . $final[14] . $final[15] . $final[16] . $final[17] . $final[18] . $final[19] . $final[20] . $final[21] . $final[23] . $final[24] . $final[25] . $final[26] . $final[27] . $final[28] . $final[29] . $final[30] . $final[31];
+echo <<< EOD
+            {
+                "message": {
+                    "text": "$func"
+                },
+                "keyboard" :
+                {
+                  "type" : "buttons",
+                  "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+               }
+            }
+EOD;
+}
+    if ( strpos($content, "다음달 학사일정") !== false ) {
+        $final = cal(1);
+        $func = $final[0] . $final[1] . $final[2] . $final[3] . $final[4] . $final[5] . $final[6] . $final[7] . $final[8] . $final[9] . $final[10] . $final[11] . $final[12] . $final[13] . $final[14] . $final[15] . $final[16] . $final[17] . $final[18] . $final[19] . $final[20] . $final[21] . $final[23] . $final[24] . $final[25] . $final[26] . $final[27] . $final[28] . $final[29] . $final[30] . $final[31];
+echo <<< EOD
+        {
+            "message": {
+                "text": "$func"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+           }
+        }
+EOD;
+}
+    if ( strpos($content, "다다음달 학사일정") !== false ) {
+      $final = cal(2);
+      $func = $final[0] . $final[1] . $final[2] . $final[3] . $final[4] . $final[5] . $final[6] . $final[7] . $final[8] . $final[9] . $final[10] . $final[11] . $final[12] . $final[13] . $final[14] . $final[15] . $final[16] . $final[17] . $final[18] . $final[19] . $final[20] . $final[21] . $final[23] . $final[24] . $final[25] . $final[26] . $final[27] . $final[28] . $final[29] . $final[30] . $final[31];
+echo <<< EOD
+        {
+            "message": {
+                "text": "$func"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+           }
+        }
+EOD;
+}
+    else if ( strpos($content, "학사력") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "어느 달의 학사력을 알려줄까? 선택해줘!"
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["이번달 학사일정", "다음달 학사일정", "다다음달 학사일정"]
+              }
+            }';
+    }
+
+    else if ( strpos($content, "교통정보") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "개발중인 기능이에요 :) 잠시만 기다려주세요!"
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              }
+            }';
+    }
+    if ( strpos($content, "오늘 날씨") !== false ) {
+        $func = weather(0);
+        $final = $func[0] . $func[1] . $func[2] . $func[3] . $func[4] . $func[5] . $func[6] . $func[7]. $func[8];
+    echo <<< EOD
+            {
+                "message": {
+                    "text": "$final"
+                },
+                "keyboard" :
+                {
+                  "type" : "buttons",
+                  "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+               }
+            }
+EOD;
+        }
+        else if ( strpos($content, "내일 날씨") !== false ) {
+          $func = weather(1);
+          $final = $func[0] . $func[1] . $func[2] . $func[3] . $func[4] . $func[5] . $func[6] . $func[7]. $func[8];
+    echo <<< EOD
+        {
+            "message": {
+                "text": "$final"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+           }
+        }
+EOD;
+        }
+        else if ( strpos($content, "모레 날씨") !== false ) {
+          $func = weather(2);
+          $final = $func[0] . $func[1] . $func[2] . $func[3] . $func[4] . $func[5] . $func[6] . $func[7]. $func[8];
+    echo <<< EOD
+        {
+            "message": {
+                "text": "$final"
+            },
+            "keyboard" :
+            {
+              "type" : "buttons",
+              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+           }
+        }
+EOD;
+    }
+    else if ( strpos($content, "날씨") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "어느 날짜의 날씨를 알려줄까? 날짜를 선택해줘!"
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["오늘 날씨", "내일 날씨", "모레 날씨"]
+              }
+            }';
     }
 else{
     echo '{
