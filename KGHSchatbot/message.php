@@ -3,7 +3,7 @@
     $content = $data["content"];
     include("./functions/menu2.php");
     include("./functions/menu3.php");
-    include("./functions/weather1.php");
+    include("./functions/weather.php");
     include("./functions/calander.php");
     if ( strpos($content, "개발자") !== false ) {
       echo '{
