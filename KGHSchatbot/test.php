@@ -1,9 +1,6 @@
 <?php
 $req = 2;
-function cal()
-{
   $init = date("m");
-  $month = intval($init) + intval(2);
-}
+  $month = intval($init) + intval($req);
 echo "$month"
 ?>
