@@ -1,10 +1,9 @@
 <?php
 function cal($req)
 {
-  $init = date("m");
-  $month = intval($init) + intval($req);
+  $month = date('m') + $req;
   if ( $month > 12 ) {
-    $month = intval($month) - intval(12);
+    $month -= 12;
   }
   if ( $month == 3 ) {
     $cal[0] = "<경기고등학교 " . $month . "월 학사일정> \\n\\n";//날짜 맞추려고 공백. 여기에 입력된 데이터는 출력되지 않음
