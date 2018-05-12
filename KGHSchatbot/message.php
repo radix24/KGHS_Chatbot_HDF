@@ -151,548 +151,728 @@ EOD;
       echo '{
             "message" :
             {
-              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+              "text" : "조회를 원하는 요일을 선택해주세요. 모든 요일 한번에 보기 기능은 준비중입니다."
             },
             "keyboard" :
             {
               "type" : "buttons",
-              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              "buttons": ["월요일 시간표", "화요일 시간표", "수요일 시간표", "목요일 시간표", "금요일 시간표"]
             }
       }';
+      $grade = 1;
+      $class = 1;
     }
     elseif ( strpos($content, "1학년 2반") !== false ) {
       echo '{
             "message" :
             {
-              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+              "text" : "조회를 원하는 요일을 선택해주세요. 모든 요일 한번에 보기 기능은 준비중입니다."
             },
             "keyboard" :
             {
               "type" : "buttons",
-              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              "buttons": ["월요일 시간표", "화요일 시간표", "수요일 시간표", "목요일 시간표", "금요일 시간표"]
             }
       }';
+      $grade = 1;
+      $class = 2;
     }
     elseif ( strpos($content, "1학년 3반") !== false ) {
       echo '{
             "message" :
             {
-              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+              "text" : "조회를 원하는 요일을 선택해주세요. 모든 요일 한번에 보기 기능은 준비중입니다."
             },
             "keyboard" :
             {
               "type" : "buttons",
-              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              "buttons": ["월요일 시간표", "화요일 시간표", "수요일 시간표", "목요일 시간표", "금요일 시간표"]
             }
       }';
+      $grade = 1;
+      $class = 3;
     }
     elseif ( strpos($content, "1학년 4반") !== false ) {
       echo '{
             "message" :
             {
-              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+              "text" : "조회를 원하는 요일을 선택해주세요. 모든 요일 한번에 보기 기능은 준비중입니다."
             },
             "keyboard" :
             {
               "type" : "buttons",
-              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              "buttons": ["월요일 시간표", "화요일 시간표", "수요일 시간표", "목요일 시간표", "금요일 시간표"]
             }
       }';
+      $grade = 1;
+      $class = 4;
     }
     elseif ( strpos($content, "1학년 5반") !== false ) {
       echo '{
             "message" :
             {
-              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+              "text" : "조회를 원하는 요일을 선택해주세요. 모든 요일 한번에 보기 기능은 준비중입니다."
             },
             "keyboard" :
             {
               "type" : "buttons",
-              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              "buttons": ["월요일 시간표", "화요일 시간표", "수요일 시간표", "목요일 시간표", "금요일 시간표"]
             }
       }';
+      $grade = 1;
+      $class = 5;
     }
     elseif ( strpos($content, "1학년 6반") !== false ) {
       echo '{
             "message" :
             {
-              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+              "text" : "조회를 원하는 요일을 선택해주세요. 모든 요일 한번에 보기 기능은 준비중입니다."
             },
             "keyboard" :
             {
               "type" : "buttons",
-              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              "buttons": ["월요일 시간표", "화요일 시간표", "수요일 시간표", "목요일 시간표", "금요일 시간표"]
             }
       }';
+      $grade = 1;
+      $class = 6;
     }
     elseif ( strpos($content, "1학년 7반") !== false ) {
       echo '{
             "message" :
             {
-              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+              "text" : "조회를 원하는 요일을 선택해주세요. 모든 요일 한번에 보기 기능은 준비중입니다."
             },
             "keyboard" :
             {
               "type" : "buttons",
-              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              "buttons": ["월요일 시간표", "화요일 시간표", "수요일 시간표", "목요일 시간표", "금요일 시간표"]
             }
       }';
+      $grade = 1;
+      $class = 7;
     }
     elseif ( strpos($content, "1학년 8반") !== false ) {
       echo '{
             "message" :
             {
-              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+              "text" : "조회를 원하는 요일을 선택해주세요. 모든 요일 한번에 보기 기능은 준비중입니다."
             },
             "keyboard" :
             {
               "type" : "buttons",
-              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              "buttons": ["월요일 시간표", "화요일 시간표", "수요일 시간표", "목요일 시간표", "금요일 시간표"]
             }
       }';
+      $grade = 1;
+      $class = 8;
     }
     elseif ( strpos($content, "1학년 9반") !== false ) {
       echo '{
             "message" :
             {
-              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+              "text" : "조회를 원하는 요일을 선택해주세요. 모든 요일 한번에 보기 기능은 준비중입니다."
             },
             "keyboard" :
             {
               "type" : "buttons",
-              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              "buttons": ["월요일 시간표", "화요일 시간표", "수요일 시간표", "목요일 시간표", "금요일 시간표"]
             }
       }';
+      $grade = 1;
+      $class = 9;
     }
     elseif ( strpos($content, "1학년 10반") !== false ) {
       echo '{
             "message" :
             {
-              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+              "text" : "조회를 원하는 요일을 선택해주세요. 모든 요일 한번에 보기 기능은 준비중입니다."
             },
             "keyboard" :
             {
               "type" : "buttons",
-              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              "buttons": ["월요일 시간표", "화요일 시간표", "수요일 시간표", "목요일 시간표", "금요일 시간표"]
             }
       }';
+      $grade = 1;
+      $class = 10;
     }
     elseif ( strpos($content, "1학년 11반") !== false ) {
       echo '{
             "message" :
             {
-              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+              "text" : "조회를 원하는 요일을 선택해주세요. 모든 요일 한번에 보기 기능은 준비중입니다."
             },
             "keyboard" :
             {
               "type" : "buttons",
-              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              "buttons": ["월요일 시간표", "화요일 시간표", "수요일 시간표", "목요일 시간표", "금요일 시간표"]
             }
       }';
+      $grade = 1;
+      $class = 11;
     }
     elseif ( strpos($content, "1학년 12반") !== false ) {
       echo '{
             "message" :
             {
-              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+              "text" : "조회를 원하는 요일을 선택해주세요. 모든 요일 한번에 보기 기능은 준비중입니다."
             },
             "keyboard" :
             {
               "type" : "buttons",
-              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              "buttons": ["월요일 시간표", "화요일 시간표", "수요일 시간표", "목요일 시간표", "금요일 시간표"]
             }
       }';
+      $grade = 1;
+      $class = 12;
     }
     elseif ( strpos($content, "1학년 13반") !== false ) {
       echo '{
             "message" :
             {
-              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+              "text" : "조회를 원하는 요일을 선택해주세요. 모든 요일 한번에 보기 기능은 준비중입니다."
             },
             "keyboard" :
             {
               "type" : "buttons",
-              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              "buttons": ["월요일 시간표", "화요일 시간표", "수요일 시간표", "목요일 시간표", "금요일 시간표"]
             }
       }';
+      $grade = 1;
+      $class = 13;
     }
     elseif ( strpos($content, "1학년 14반") !== false ) {
       echo '{
             "message" :
             {
-              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+              "text" : "조회를 원하는 요일을 선택해주세요. 모든 요일 한번에 보기 기능은 준비중입니다."
             },
             "keyboard" :
             {
               "type" : "buttons",
-              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              "buttons": ["월요일 시간표", "화요일 시간표", "수요일 시간표", "목요일 시간표", "금요일 시간표"]
             }
       }';
+      $grade = 1;
+      $class = 14;
     }
     elseif ( strpos($content, "2학년 1반") !== false ) {
       echo '{
             "message" :
             {
-              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+              "text" : "조회를 원하는 요일을 선택해주세요. 모든 요일 한번에 보기 기능은 준비중입니다."
             },
             "keyboard" :
             {
               "type" : "buttons",
-              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              "buttons": ["월요일 시간표", "화요일 시간표", "수요일 시간표", "목요일 시간표", "금요일 시간표"]
             }
       }';
+      $grade = 2;
+      $class = 1;
     }
     elseif ( strpos($content, "2학년 2반") !== false ) {
       echo '{
             "message" :
             {
-              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+              "text" : "조회를 원하는 요일을 선택해주세요. 모든 요일 한번에 보기 기능은 준비중입니다."
             },
             "keyboard" :
             {
               "type" : "buttons",
-              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              "buttons": ["월요일 시간표", "화요일 시간표", "수요일 시간표", "목요일 시간표", "금요일 시간표"]
             }
       }';
+      $grade = 2;
+      $class = 2;
     }
     elseif ( strpos($content, "2학년 3반") !== false ) {
       echo '{
             "message" :
             {
-              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+              "text" : "조회를 원하는 요일을 선택해주세요. 모든 요일 한번에 보기 기능은 준비중입니다."
             },
             "keyboard" :
             {
               "type" : "buttons",
-              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              "buttons": ["월요일 시간표", "화요일 시간표", "수요일 시간표", "목요일 시간표", "금요일 시간표"]
             }
       }';
+      $grade = 2;
+      $class = 3;
     }
     elseif ( strpos($content, "2학년 4반") !== false ) {
       echo '{
             "message" :
             {
-              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+              "text" : "조회를 원하는 요일을 선택해주세요. 모든 요일 한번에 보기 기능은 준비중입니다."
             },
             "keyboard" :
             {
               "type" : "buttons",
-              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              "buttons": ["월요일 시간표", "화요일 시간표", "수요일 시간표", "목요일 시간표", "금요일 시간표"]
             }
       }';
+      $grade = 2;
+      $class = 4;
     }
     elseif ( strpos($content, "2학년 5반") !== false ) {
       echo '{
             "message" :
             {
-              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+              "text" : "조회를 원하는 요일을 선택해주세요. 모든 요일 한번에 보기 기능은 준비중입니다."
             },
             "keyboard" :
             {
               "type" : "buttons",
-              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              "buttons": ["월요일 시간표", "화요일 시간표", "수요일 시간표", "목요일 시간표", "금요일 시간표"]
             }
       }';
+      $grade = 2;
+      $class = 5;
     }
     elseif ( strpos($content, "2학년 6반") !== false ) {
       echo '{
             "message" :
             {
-              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+              "text" : "조회를 원하는 요일을 선택해주세요. 모든 요일 한번에 보기 기능은 준비중입니다."
             },
             "keyboard" :
             {
               "type" : "buttons",
-              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              "buttons": ["월요일 시간표", "화요일 시간표", "수요일 시간표", "목요일 시간표", "금요일 시간표"]
             }
       }';
+      $grade = 2;
+      $class = 6;
     }
     elseif ( strpos($content, "2학년 7반") !== false ) {
       echo '{
             "message" :
             {
-              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+              "text" : "조회를 원하는 요일을 선택해주세요. 모든 요일 한번에 보기 기능은 준비중입니다."
             },
             "keyboard" :
             {
               "type" : "buttons",
-              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              "buttons": ["월요일 시간표", "화요일 시간표", "수요일 시간표", "목요일 시간표", "금요일 시간표"]
             }
       }';
+      $grade = 2;
+      $class = 7;
     }
     elseif ( strpos($content, "2학년 8반") !== false ) {
       echo '{
             "message" :
             {
-              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+              "text" : "조회를 원하는 요일을 선택해주세요. 모든 요일 한번에 보기 기능은 준비중입니다."
             },
             "keyboard" :
             {
               "type" : "buttons",
-              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              "buttons": ["월요일 시간표", "화요일 시간표", "수요일 시간표", "목요일 시간표", "금요일 시간표"]
             }
       }';
+      $grade = 2;
+      $class = 8;
     }
     elseif ( strpos($content, "2학년 9반") !== false ) {
       echo '{
             "message" :
             {
-              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+              "text" : "조회를 원하는 요일을 선택해주세요. 모든 요일 한번에 보기 기능은 준비중입니다."
             },
             "keyboard" :
             {
               "type" : "buttons",
-              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              "buttons": ["월요일 시간표", "화요일 시간표", "수요일 시간표", "목요일 시간표", "금요일 시간표"]
             }
       }';
+      $grade = 2;
+      $class = 9;
     }
     elseif ( strpos($content, "2학년 10반") !== false ) {
       echo '{
             "message" :
             {
-              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+              "text" : "조회를 원하는 요일을 선택해주세요. 모든 요일 한번에 보기 기능은 준비중입니다."
             },
             "keyboard" :
             {
               "type" : "buttons",
-              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              "buttons": ["월요일 시간표", "화요일 시간표", "수요일 시간표", "목요일 시간표", "금요일 시간표"]
             }
       }';
+      $grade = 2;
+      $class = 10;
     }
     elseif ( strpos($content, "2학년 11반") !== false ) {
       echo '{
             "message" :
             {
-              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+              "text" : "조회를 원하는 요일을 선택해주세요. 모든 요일 한번에 보기 기능은 준비중입니다."
             },
             "keyboard" :
             {
               "type" : "buttons",
-              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              "buttons": ["월요일 시간표", "화요일 시간표", "수요일 시간표", "목요일 시간표", "금요일 시간표"]
             }
       }';
+      $grade = 2;
+      $class = 11;
     }
     elseif ( strpos($content, "2학년 12반") !== false ) {
       echo '{
             "message" :
             {
-              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+              "text" : "조회를 원하는 요일을 선택해주세요. 모든 요일 한번에 보기 기능은 준비중입니다."
             },
             "keyboard" :
             {
               "type" : "buttons",
-              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              "buttons": ["월요일 시간표", "화요일 시간표", "수요일 시간표", "목요일 시간표", "금요일 시간표"]
             }
       }';
+      $grade = 2;
+      $class = 12;
     }
     elseif ( strpos($content, "2학년 13반") !== false ) {
       echo '{
             "message" :
             {
-              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+              "text" : "조회를 원하는 요일을 선택해주세요. 모든 요일 한번에 보기 기능은 준비중입니다."
             },
             "keyboard" :
             {
               "type" : "buttons",
-              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              "buttons": ["월요일 시간표", "화요일 시간표", "수요일 시간표", "목요일 시간표", "금요일 시간표"]
             }
       }';
+      $grade = 2;
+      $class = 13;
     }
     elseif ( strpos($content, "2학년 14반") !== false ) {
       echo '{
             "message" :
             {
-              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+              "text" : "조회를 원하는 요일을 선택해주세요. 모든 요일 한번에 보기 기능은 준비중입니다."
             },
             "keyboard" :
             {
               "type" : "buttons",
-              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              "buttons": ["월요일 시간표", "화요일 시간표", "수요일 시간표", "목요일 시간표", "금요일 시간표"]
             }
       }';
+      $grade = 2;
+      $class = 14;
     }
     elseif ( strpos($content, "3학년 1반") !== false ) {
       echo '{
             "message" :
             {
-              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+              "text" : "조회를 원하는 요일을 선택해주세요. 모든 요일 한번에 보기 기능은 준비중입니다."
             },
             "keyboard" :
             {
               "type" : "buttons",
-              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              "buttons": ["월요일 시간표", "화요일 시간표", "수요일 시간표", "목요일 시간표", "금요일 시간표"]
             }
       }';
+      $grade = 3;
+      $class = 1;
     }
     elseif ( strpos($content, "3학년 2반") !== false ) {
       echo '{
             "message" :
             {
-              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+              "text" : "조회를 원하는 요일을 선택해주세요. 모든 요일 한번에 보기 기능은 준비중입니다."
             },
             "keyboard" :
             {
               "type" : "buttons",
-              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              "buttons": ["월요일 시간표", "화요일 시간표", "수요일 시간표", "목요일 시간표", "금요일 시간표"]
             }
       }';
+      $grade = 3;
+      $class = 2;
     }
     elseif ( strpos($content, "3학년 3반") !== false ) {
       echo '{
             "message" :
             {
-              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+              "text" : "조회를 원하는 요일을 선택해주세요. 모든 요일 한번에 보기 기능은 준비중입니다."
             },
             "keyboard" :
             {
               "type" : "buttons",
-              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              "buttons": ["월요일 시간표", "화요일 시간표", "수요일 시간표", "목요일 시간표", "금요일 시간표"]
             }
       }';
+      $grade = 3;
+      $class = 3;
     }
     elseif ( strpos($content, "3학년 4반") !== false ) {
       echo '{
             "message" :
             {
-              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+              "text" : "조회를 원하는 요일을 선택해주세요. 모든 요일 한번에 보기 기능은 준비중입니다."
             },
             "keyboard" :
             {
               "type" : "buttons",
-              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              "buttons": ["월요일 시간표", "화요일 시간표", "수요일 시간표", "목요일 시간표", "금요일 시간표"]
             }
       }';
+      $grade = 3;
+      $class = 4;
     }
     elseif ( strpos($content, "3학년 5반") !== false ) {
       echo '{
             "message" :
             {
-              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+              "text" : "조회를 원하는 요일을 선택해주세요. 모든 요일 한번에 보기 기능은 준비중입니다."
             },
             "keyboard" :
             {
               "type" : "buttons",
-              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              "buttons": ["월요일 시간표", "화요일 시간표", "수요일 시간표", "목요일 시간표", "금요일 시간표"]
             }
       }';
+      $grade = 3;
+      $class = 5;
     }
     elseif ( strpos($content, "3학년 6반") !== false ) {
       echo '{
             "message" :
             {
-              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+              "text" : "조회를 원하는 요일을 선택해주세요. 모든 요일 한번에 보기 기능은 준비중입니다."
             },
             "keyboard" :
             {
               "type" : "buttons",
-              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              "buttons": ["월요일 시간표", "화요일 시간표", "수요일 시간표", "목요일 시간표", "금요일 시간표"]
             }
       }';
+      $grade = 3;
+      $class = 6;
     }
     elseif ( strpos($content, "3학년 7반") !== false ) {
       echo '{
             "message" :
             {
-              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+              "text" : "조회를 원하는 요일을 선택해주세요. 모든 요일 한번에 보기 기능은 준비중입니다."
             },
             "keyboard" :
             {
               "type" : "buttons",
-              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              "buttons": ["월요일 시간표", "화요일 시간표", "수요일 시간표", "목요일 시간표", "금요일 시간표"]
             }
       }';
+      $grade = 3;
+      $class = 7;
     }
     elseif ( strpos($content, "3학년 8반") !== false ) {
       echo '{
             "message" :
             {
-              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+              "text" : "조회를 원하는 요일을 선택해주세요. 모든 요일 한번에 보기 기능은 준비중입니다."
             },
             "keyboard" :
             {
               "type" : "buttons",
-              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              "buttons": ["월요일 시간표", "화요일 시간표", "수요일 시간표", "목요일 시간표", "금요일 시간표"]
             }
       }';
+      $grade = 3;
+      $class = 8;
     }
     elseif ( strpos($content, "3학년 9반") !== false ) {
       echo '{
             "message" :
             {
-              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+              "text" : "조회를 원하는 요일을 선택해주세요. 모든 요일 한번에 보기 기능은 준비중입니다."
             },
             "keyboard" :
             {
               "type" : "buttons",
-              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              "buttons": ["월요일 시간표", "화요일 시간표", "수요일 시간표", "목요일 시간표", "금요일 시간표"]
             }
       }';
+      $grade = 3;
+      $class = 9;
     }
     elseif ( strpos($content, "3학년 10반") !== false ) {
       echo '{
             "message" :
             {
-              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+              "text" : "조회를 원하는 요일을 선택해주세요. 모든 요일 한번에 보기 기능은 준비중입니다."
             },
             "keyboard" :
             {
               "type" : "buttons",
-              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              "buttons": ["월요일 시간표", "화요일 시간표", "수요일 시간표", "목요일 시간표", "금요일 시간표"]
             }
       }';
+      $grade = 3;
+      $class = 10;
     }
     elseif ( strpos($content, "3학년 11반") !== false ) {
       echo '{
             "message" :
             {
-              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+              "text" : "조회를 원하는 요일을 선택해주세요. 모든 요일 한번에 보기 기능은 준비중입니다."
             },
             "keyboard" :
             {
               "type" : "buttons",
-              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              "buttons": ["월요일 시간표", "화요일 시간표", "수요일 시간표", "목요일 시간표", "금요일 시간표"]
             }
       }';
+      $grade = 3;
+      $class = 11;
     }
     elseif ( strpos($content, "3학년 12반") !== false ) {
       echo '{
             "message" :
             {
-              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+              "text" : "조회를 원하는 요일을 선택해주세요. 모든 요일 한번에 보기 기능은 준비중입니다."
             },
             "keyboard" :
             {
               "type" : "buttons",
-              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              "buttons": ["월요일 시간표", "화요일 시간표", "수요일 시간표", "목요일 시간표", "금요일 시간표"]
             }
       }';
+      $grade = 3;
+      $class = 12;
     }
     elseif ( strpos($content, "3학년 13반") !== false ) {
       echo '{
             "message" :
             {
-              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+              "text" : "조회를 원하는 요일을 선택해주세요. 모든 요일 한번에 보기 기능은 준비중입니다."
             },
             "keyboard" :
             {
               "type" : "buttons",
-              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              "buttons": ["월요일 시간표", "화요일 시간표", "수요일 시간표", "목요일 시간표", "금요일 시간표"]
             }
       }';
+      $grade = 3;
+      $class = 13;
     }
     elseif ( strpos($content, "3학년 14반") !== false ) {
       echo '{
             "message" :
             {
-              "text" : "아직 이 반은 시간표 정보가 없어! 상담원과 연결하기 버튼을 눌러서 시간표를 추가해줘!"
+              "text" : "조회를 원하는 요일을 선택해주세요. 모든 요일 한번에 보기 기능은 준비중입니다."
             },
             "keyboard" :
             {
               "type" : "buttons",
-              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              "buttons": ["월요일 시간표", "화요일 시간표", "수요일 시간표", "목요일 시간표", "금요일 시간표"]
             }
       }';
+      $grade = 3;
+      $class = 14;
     }
+    else if ( strpos($content, "월요일 시간표") !== false ) {
+      $final = gettimetable($grade, $class, 1);
+      $func = $final[0] . $final[1] . $final[2] . $final[3] . $final[4] . $final[5] . $final[6] . $final[7] . $final[8];
+echo <<< EOD
+                  {
+                      "message": {
+                          "text": "$func"
+                      },
+                      "keyboard" :
+                      {
+                        "type" : "buttons",
+                        "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+                     }
+                  }
+EOD;
+}
+    else if ( strpos($content, "화요일 시간표") !== false ) {
+      $final = gettimetable($grade, $class, 2);
+      $func = $final[0] . $final[1] . $final[2] . $final[3] . $final[4] . $final[5] . $final[6] . $final[7] . $final[8];
+echo <<< EOD
+              {
+                  "message": {
+                      "text": "$func"
+                  },
+                  "keyboard" :
+                  {
+                    "type" : "buttons",
+                    "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+                 }
+              }
+EOD;
+}
+    else if ( strpos($content, "수요일 시간표") !== false ) {
+      $final = gettimetable($grade, $class, 3);
+      $func = $final[0] . $final[1] . $final[2] . $final[3] . $final[4] . $final[5] . $final[6] . $final[7] . $final[8];
+echo <<< EOD
+          {
+              "message": {
+                  "text": "$func"
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+             }
+          }
+EOD;
+}
+    else if ( strpos($content, "수요일 시간표") !== false ) {
+      $final = gettimetable($grade, $class, 3);
+      $func = $final[0] . $final[1] . $final[2] . $final[3] . $final[4] . $final[5] . $final[6] . $final[7] . $final[8];
+echo <<< EOD
+          {
+              "message": {
+                  "text": "$func"
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+             }
+          }
+EOD;
+}
+    else if ( strpos($content, "목요일 시간표") !== false ) {
+      $final = gettimetable($grade, $class, 4);
+      $func = $final[0] . $final[1] . $final[2] . $final[3] . $final[4] . $final[5] . $final[6] . $final[7] . $final[8];
+echo <<< EOD
+          {
+              "message": {
+                  "text": "$func"
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+             }
+          }
+EOD;
+}
+    else if ( strpos($content, "금요일 시간표") !== false ) {
+      $final = gettimetable($grade, $class, 5);
+      $func = $final[0] . $final[1] . $final[2] . $final[3] . $final[4] . $final[5] . $final[6] . $final[7] . $final[8];
+echo <<< EOD
+          {
+              "message": {
+                  "text": "$func"
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+             }
+          }
+EOD;
+}
     else if ( strpos($content, "1학년") !== false ) {
         echo '{
               "message" :
