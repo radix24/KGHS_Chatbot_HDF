@@ -5,6 +5,7 @@
     include("./functions/menu3.php");
     include("./functions/weather.php");
     include("./functions/calander.php");
+    include("./functions/timetable.php");
     if ( strpos($content, "개발자") !== false ) {
       echo '{
             "message" :
