@@ -1,6 +1,6 @@
 <?php
 gettimetable($grade, $class, $day){
-    $db_host="";
+    $db_host="kyunggilife.com";
     $db_user="";
     $db_password="";
     $conn = mysqli_connect($db_host, $db_user, $db_password, $db_name);

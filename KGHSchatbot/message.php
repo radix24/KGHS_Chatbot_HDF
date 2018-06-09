@@ -929,25 +929,25 @@ echo <<< EOD
             }
 EOD;
 }
+if ( strpos($content, "다다음달 학사일정") !== false ) {
+  $final = cal(2);
+  $func = $final[0] . $final[1] . $final[2] . $final[3] . $final[4] . $final[5] . $final[6] . $final[7] . $final[8] . $final[9] . $final[10] . $final[11] . $final[12] . $final[13] . $final[14] . $final[15] . $final[16] . $final[17] . $final[18] . $final[19] . $final[20] . $final[21] . $final[23] . $final[24] . $final[25] . $final[26] . $final[27] . $final[28] . $final[29] . $final[30] . $final[31];
+echo <<< EOD
+    {
+        "message": {
+            "text": "$func"
+        },
+        "keyboard" :
+        {
+          "type" : "buttons",
+          "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+       }
+    }
+EOD;
+}
     if ( strpos($content, "다음달 학사일정") !== false ) {
         $final = cal(1);
         $func = $final[0] . $final[1] . $final[2] . $final[3] . $final[4] . $final[5] . $final[6] . $final[7] . $final[8] . $final[9] . $final[10] . $final[11] . $final[12] . $final[13] . $final[14] . $final[15] . $final[16] . $final[17] . $final[18] . $final[19] . $final[20] . $final[21] . $final[23] . $final[24] . $final[25] . $final[26] . $final[27] . $final[28] . $final[29] . $final[30] . $final[31];
-echo <<< EOD
-        {
-            "message": {
-                "text": "$func"
-            },
-            "keyboard" :
-            {
-              "type" : "buttons",
-              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
-           }
-        }
-EOD;
-}
-    if ( strpos($content, "다다음달 학사일정") !== false ) {
-      $final = cal(2);
-      $func = $final[0] . $final[1] . $final[2] . $final[3] . $final[4] . $final[5] . $final[6] . $final[7] . $final[8] . $final[9] . $final[10] . $final[11] . $final[12] . $final[13] . $final[14] . $final[15] . $final[16] . $final[17] . $final[18] . $final[19] . $final[20] . $final[21] . $final[23] . $final[24] . $final[25] . $final[26] . $final[27] . $final[28] . $final[29] . $final[30] . $final[31];
 echo <<< EOD
         {
             "message": {
