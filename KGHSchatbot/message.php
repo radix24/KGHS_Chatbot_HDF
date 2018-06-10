@@ -135,6 +135,102 @@ EOD;
           }
     }';
 }
+else if ( strpos($content, " 시간표") !== false ) {
+  $final = gettimetable($grade, $class, 1);
+  $func = $final[0] . $final[1] . $final[2] . $final[3] . $final[4] . $final[5] . $final[6] . $final[7] . $final[8];
+echo <<< EOD
+              {
+                  "message": {
+                      "text": "$func"
+                  },
+                  "keyboard" :
+                  {
+                    "type" : "buttons",
+                    "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+                 }
+              }
+EOD;
+}
+else if ( strpos($content, "화요일 시간표") !== false ) {
+  $final = gettimetable($grade, $class, 2);
+  $func = $final[0] . $final[1] . $final[2] . $final[3] . $final[4] . $final[5] . $final[6] . $final[7] . $final[8];
+echo <<< EOD
+          {
+              "message": {
+                  "text": "$func"
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+             }
+          }
+EOD;
+}
+else if ( strpos($content, "수요일 시간표") !== false ) {
+  $final = gettimetable($grade, $class, 3);
+  $func = $final[0] . $final[1] . $final[2] . $final[3] . $final[4] . $final[5] . $final[6] . $final[7] . $final[8];
+echo <<< EOD
+      {
+          "message": {
+              "text": "$func"
+          },
+          "keyboard" :
+          {
+            "type" : "buttons",
+            "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+         }
+      }
+EOD;
+}
+else if ( strpos($content, "수요일 시간표") !== false ) {
+  $final = gettimetable($grade, $class, 3);
+  $func = $final[0] . $final[1] . $final[2] . $final[3] . $final[4] . $final[5] . $final[6] . $final[7] . $final[8];
+echo <<< EOD
+      {
+          "message": {
+              "text": "$func"
+          },
+          "keyboard" :
+          {
+            "type" : "buttons",
+            "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+         }
+      }
+EOD;
+}
+else if ( strpos($content, "목요일 시간표") !== false ) {
+  $final = gettimetable($grade, $class, 4);
+  $func = $final[0] . $final[1] . $final[2] . $final[3] . $final[4] . $final[5] . $final[6] . $final[7] . $final[8];
+echo <<< EOD
+      {
+          "message": {
+              "text": "$func"
+          },
+          "keyboard" :
+          {
+            "type" : "buttons",
+            "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+         }
+      }
+EOD;
+}
+else if ( strpos($content, "금요일 시간표") !== false ) {
+  $final = gettimetable($grade, $class, 5);
+  $func = $final[0] . $final[1] . $final[2] . $final[3] . $final[4] . $final[5] . $final[6] . $final[7] . $final[8];
+echo <<< EOD
+      {
+          "message": {
+              "text": "$func"
+          },
+          "keyboard" :
+          {
+            "type" : "buttons",
+            "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+         }
+      }
+EOD;
+}
     else if ( strpos($content, "시간표") !== false ) {
         echo '{
               "message" :
@@ -248,9 +344,11 @@ EOD;
             "keyboard" :
             {
               "type" : "buttons",
-              "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              "buttons": [" 시간표", "화요일 시간표", "수요일 시간표", "목요일 시간표", "금요일 시간표"]
             }
       }';
+      $grade = 1;
+      $class = 8;
     }
     elseif ( strpos($content, "1학년 9반") !== false ) {
       echo '{
@@ -794,7 +892,6 @@ EOD;
               }
             }';
     }
-
     else if ( strpos($content, "교통정보") !== false ) {
         echo '{
               "message" :
@@ -882,8 +979,4 @@ else{
           }
     }';
 }
-
-
-
-
 ?>
