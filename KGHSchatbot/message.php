@@ -5,7 +5,7 @@
     include("./functions/menu3.php");
     include("./functions/weather1.php");
     include("./functions/calander.php");
-    include("./functions/timetable.php");
+    include("./functions/timetableweek.php");
     if ( strpos($content, "개발자") !== false ) {
       echo '{
             "message" :
@@ -135,25 +135,13 @@ EOD;
           }
     }';
 }
-else if ( strpos($content, " 시간표") !== false ) {
-  $final = gettimetable($grade, $class, 1);
+else if ( strpos($content, "월요일 시간표") !== false ) {
+  session_start();
+  $final = gettimetable($_SESSION['grade'], $_SESSION['class'], $_SESSION['class'], 1);
   $func = $final[0] . $final[1] . $final[2] . $final[3] . $final[4] . $final[5] . $final[6] . $final[7] . $final[8];
-echo <<< EOD
-              {
-                  "message": {
-                      "text": "$func"
-                  },
-                  "keyboard" :
-                  {
-                    "type" : "buttons",
-                    "buttons": ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
-                 }
-              }
-EOD;
-}
-else if ( strpos($content, "화요일 시간표") !== false ) {
-  $final = gettimetable($grade, $class, 2);
-  $func = $final[0] . $final[1] . $final[2] . $final[3] . $final[4] . $final[5] . $final[6] . $final[7] . $final[8];
+  unset($_SESSION['grade']);
+  unset($_SESSION['class']);
+  session_destroy();
 echo <<< EOD
           {
               "message": {
@@ -167,8 +155,8 @@ echo <<< EOD
           }
 EOD;
 }
-else if ( strpos($content, "수요일 시간표") !== false ) {
-  $final = gettimetable($grade, $class, 3);
+else if ( strpos($content, "화요일 시간표") !== false ) {
+  $final = gettimetable($grade, $class, 2);
   $func = $final[0] . $final[1] . $final[2] . $final[3] . $final[4] . $final[5] . $final[6] . $final[7] . $final[8];
 echo <<< EOD
       {
@@ -336,19 +324,21 @@ EOD;
       }';
     }
     elseif ( strpos($content, "1학년 8반") !== false ) {
-      echo '{
+      $final = timetable(1, 8);
+      $func = $text[0] . $text[1] . $text[2] . $text[3] . $text[4];
+echo <<< EOD
+        {
             "message" :
             {
-              "text" : "학교와의 시간표 정보 관련 협의가 이루어지지 않아 시간표 데이터를 제공할 수 없습니다. 잠시만 기다려주세요, 기능이 추가되면 다시 공지드리겠습니다 :) "
+              "text" : "$func"
             },
             "keyboard" :
             {
               "type" : "buttons",
-              "buttons": [" 시간표", "화요일 시간표", "수요일 시간표", "목요일 시간표", "금요일 시간표"]
+              "buttons": ["월요일 시간표", "화요일 시간표", "수요일 시간표", "목요일 시간표", "금요일 시간표"]
             }
-      }';
-      $grade = 1;
-      $class = 8;
+        }
+EOD;
     }
     elseif ( strpos($content, "1학년 9반") !== false ) {
       echo '{
