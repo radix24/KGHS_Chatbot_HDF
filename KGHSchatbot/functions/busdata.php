@@ -7,27 +7,32 @@ function weather($st_id, $line_code, $ord)
   $URL = "http://ws.bus.go.kr/api/rest/arrive/getArrInfoByRoute?serviceKey=" . $servicekey . "&stId=" . $st_id . "&busRouteId=" . $line_code . "&ord=" . $ord . "";
   $snoopy = new Snoopy;
   $snoopy->fetch($URL);
-  preg_match('/<msgBody>(.*?)<\/msgBody>/is', $snoopy->results, $body);
-  $bus_data = $body[0];
+  // generate url, fetch
+
+  preg_match('/<msgBody>(.*?)<\/msgBody>/is', $snoopy->results, $bus_data);
   $bus_data = $bus_data[0];
+  // get msgBody
+
   preg_match('/<stNm>(.*?)<\/stNm>/is', $bus_data, $station_name);  $station_name = $station_name[0];
   preg_match('/<rtNm>(.*?)<\/rtNm>/is', $bus_data, $route_name);  $route_name = $route_name[0];
   preg_match('/<firstTm>(.*?)<\/firstTm>/is', $bus_data, $first_time);  $first_time = $first_time[0];
   preg_match('/<lastTm>(.*?)<\/lastTm>/is', $bus_data, $last_time); $last_time = $last_time[0];
   preg_match('/<term>(.*?)<\/term>/is', $bus_data, $term);  $term = $term[0];
   preg_match('/<arrmsg1>(.*?)<\/arrmsg1>/is', $bus_data, $bustime1); $bustime1 = $bustime1[0];
-  preg_match('/<arrmsg2>(.*?)<\/arrmsg2>/is', $bus_data, $bustime1); $bustime2 = $bustime2[0];
+  preg_match('/<arrmsg2>(.*?)<\/arrmsg2>/is', $bus_data, $bustime2); $bustime2 = $bustime2[0];
   preg_match('/<nextBus>(.*?)<\/nextBus>/is', $bus_data, $next_bus); $next_bus = $next_bus[0];
-  $list_filter = array('<stNm>', '</stNm>', '<rtNm>', '</rtNm>', '<firstTm>', '</firstTm>', '<lastTm>', '</lastTm>', '<term>', '</term>', '<arrmsg1>', '</arrmsg1>', '<arrmsg2>', '</arrmsg2>', '<nextBus>', '</nextBus>');
-  foreach ($list_filter as $filter) {
-      $station_name = str_replace($filter, '', $station_name);
-      $first_time = str_replace($filter, '', $first_time);
-      $last_time = str_replace($filter, '', $last_time);
-      $term = str_replace($filter, '', $term);
-      $bustime1 = str_replace($filter, '', $bustime1);
-      $bustime2 = str_replace($filter, '', $bustime2);
-      $next_bus = str_replace($filter, '', $next_bus);
-  }
+  // 정규식에서 태그 안의 내용물 받아오기
+  $station_name = strip_tags($station_name);
+  $route_name = strip_tags($route_name);
+  $first_time = strip_tags($first_time);
+  $last_time = strip_tags($last_time);
+  $term = strip_tags($term);
+  $bustime1 = strip_tags($bustime1);
+  $bustime2 = strip_tags($bustime2);
+  $next_bus = strip_tags($next_bus);
+  // get needed data and strip tags
+  // strip_tags() = html 태그 다 지우는 함수
+
   $first_time = date("H시 i분", strtotime( $first_time ) );
   $last_time = date("H시 i분", strtotime( $last_time ) );
   switch ($next_bus) {
@@ -53,7 +58,7 @@ function weather($st_id, $line_code, $ord)
     $bustime1 = "이번 버스 : " . $bustime1 . "\\n";
     $bustime2 = "다음 버스 : " . $bustime2 . "\\n";
   }
-  $data[0] = "현재 " . $station_name . " (" . $st_loca . ") 정류장의 " . $route_name . "번 버스 도착정보입니다. \\n \\n";
+  $data[0] = "현재 " . $station_name . " (" . $st_loca . ") 정류장의 " . $route_name . "번 버스 도착정보입니다.\\n\\n";
   $data[1] = "" . $bustime1 . "";
   $data[2] = "" . $bustime2 . "";
   $data[3] = "" . $bus_status . "";
@@ -62,5 +67,6 @@ function weather($st_id, $line_code, $ord)
   $data[6] = "막차 시간 : " . $last_time . "\\n";
   $data[7] = "배차 간격 : " . $term . "분\\n";
   return $data;
-  }
+  // pack data and return
+}
 ?>
