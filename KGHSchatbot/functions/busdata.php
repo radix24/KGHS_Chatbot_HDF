@@ -53,7 +53,7 @@ function weather($st_id, $st_num, $line_code, $ord)
     $bustime1 = "이번 버스 : " . $bustime1 . "\\n";
     $bustime2 = "다음 버스 : " . $bustime2 . "\\n";
   }
-  $data[0] = "현재 " . $statiom_name . " (" . $st_loca . ") 정류장의 " . $route_name . "번 버스 도착정보입니다. \\n \\n";
+  $data[0] = "현재 " . $station_name . " (" . $st_loca . ") 정류장의 " . $route_name . "번 버스 도착정보입니다. \\n \\n";
   $data[1] = "" . $bustime1 . "";
   $data[2] = "" . $bustime2 . "";
   $data[3] = "" . $bus_status . "";
