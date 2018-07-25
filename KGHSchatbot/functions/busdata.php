@@ -1,10 +1,10 @@
 <?php
-function weather($st_id, $st_num, $line_code, $ord)
+function weather($st_id, $line_code, $ord)
 {
   header("Content-type: application/json; charset=UTF-8");
   require("Snoopy.class.php");
   $servicekey = "94qO6gPJpfIPXPHzYydPb4FVAi8a%2B%2FiHJBys4hPMJ0EePgukYE49Q0jEwEGnjZYXs4OsWYFdiaEBBdFOpTtviQ%3D%3D";
-  $URL = "http://ws.bus.go.kr/api/rest/arrive/getArrInfoByRoute?serviceKey=" . $servicekey . "&stId=" . $st_id . "&busRouteId=" . $line_id . "ord=" . $ord . "";
+  $URL = "http://ws.bus.go.kr/api/rest/arrive/getArrInfoByRoute?serviceKey=" . $servicekey . "&stId=" . $st_id . "&busRouteId=" . $line_code . "&ord=" . $ord . "";
   $snoopy = new Snoopy;
   $snoopy->fetch($URL);
   preg_match('/<msgBody>(.*?)<\/msgBody>/is', $snoopy->results, $body);
