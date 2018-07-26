@@ -1,9 +1,36 @@
 <?php
-function weather($st_id, $line_code, $ord)
+function fetchbusdata($st_id, $line_code, $ord)
 {
   header("Content-type: application/json; charset=UTF-8");
   require("Snoopy.class.php");
   $servicekey = "94qO6gPJpfIPXPHzYydPb4FVAi8a%2B%2FiHJBys4hPMJ0EePgukYE49Q0jEwEGnjZYXs4OsWYFdiaEBBdFOpTtviQ%3D%3D";
+  switch ($line_code) {
+    case '143': $line_code="100100022"; break;
+    case '146': $line_code="100100025"; break;
+    case '301': $line_code="100100051"; break;
+    case '362': $line_code="124000036"; break;
+    case '401': $line_code="100100062"; break;
+    case '2413': $line_code="100100210"; break;
+    case '2415': $line_code="100100211"; break;
+    case '3217': $line_code="100100216"; break;
+    case '3414': $line_code="100100226"; break;
+    case '3426': $line_code="100100612"; break;
+    case '4318': $line_code="100100237"; break;
+    case '4419': $line_code="100100454"; break;
+    case '61': $line_code="100100589"; break;
+    case '08': $line_code="122900008"; break;
+    case '9407': $line_code="204000024"; break;
+    case '9507': $line_code="204000059"; break;
+    case '9607': $line_code="204000065"; break;
+  }
+  switch ($st_id) {
+    case 'a': $st_id="122000070"; break;
+    case 'b': $st_id="122000068"; break;
+    case 'c': $st_id="122000084"; break;
+    case 'd': $st_id="122000085"; break;
+    case 'e': $st_id="122000101"; break;
+    case 'f': $st_id="122000105"; break;
+  }
   $URL = "http://ws.bus.go.kr/api/rest/arrive/getArrInfoByRoute?serviceKey=" . $servicekey . "&stId=" . $st_id . "&busRouteId=" . $line_code . "&ord=" . $ord . "";
   $snoopy = new Snoopy;
   $snoopy->fetch($URL);
@@ -48,7 +75,8 @@ function weather($st_id, $line_code, $ord)
     case '122000101': $st_loca="후문에서 큰길로 나간 후 길 건너기 전"; break;
   }
   if($bustime1 == "운행종료"){
-    $bustime1 = "막차 운행이 종료되었습니다. \\n\\n";
+    $bustime1 = "막차 운행이 종료되었습니다. ";
+    $bustime2 = "";
   }
   else{
     if($bustime2 == "운행종료"){
@@ -56,7 +84,7 @@ function weather($st_id, $line_code, $ord)
       $bustime2 = "";
     }
     $bustime1 = "이번 버스 : " . $bustime1 . "\\n";
-    $bustime2 = "다음 버스 : " . $bustime2 . "\\n";
+    $bustime2 = "다음 버스 : " . $bustime2 . "";
   }
   $data[0] = "현재 " . $station_name . " (" . $st_loca . ") 정류장의 " . $route_name . "번 버스 도착정보입니다.\\n\\n";
   $data[1] = "" . $bustime1 . "";
@@ -65,7 +93,7 @@ function weather($st_id, $line_code, $ord)
   $data[4] = "\\n\\n";
   $data[5] = "첫차 시간 : " . $first_time . "\\n";
   $data[6] = "막차 시간 : " . $last_time . "\\n";
-  $data[7] = "배차 간격 : " . $term . "분\\n";
+  $data[7] = "배차 간격 : " . $term . "분";
   return $data;
   // pack data and return
 }
