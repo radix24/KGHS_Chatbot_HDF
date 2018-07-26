@@ -1161,19 +1161,6 @@ EOD;
               }
             }';
     }
-    else if ( strpos($content, "교통정보") !== false ) {
-        echo '{
-              "message" :
-              {
-                "text" : "개발중인 기능이에요 :) 잠시만 기다려주세요!"
-              },
-              "keyboard" :
-              {
-                "type" : "buttons",
-                "buttons" : ["급식 식단", "부스 안내", "시설 안내", "교통정보", "행사 안내", "날씨", "시간표", "학사력", "개발자", "메인으로"]
-              }
-            }';
-    }
     if ( strpos($content, "오늘 날씨") !== false ) {
         $func = weather(0);
         $final = $func[0] . $func[1] . $func[2] . $func[3] . $func[4] . $func[5] . $func[6] . $func[7]. $func[8];
@@ -1714,6 +1701,659 @@ EOD;
             }
           }';
     }
+    else if ( strpos($content, "교통정보") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "정문과 후문 중 어느 방향에서 출발하시는지 알려주세요! "
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["정문", "후문"]
+              }
+            }';
+    }
+    else if ( strpos($content, "정문") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "정문에서 탑승 가능한 버스를 출력중입니다. "
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["143", "146", "301", "362", "401", "2413", "2415", "3217", "3414", "3426", "4318", "4419", "N61", "강남08"]
+              }
+            }';
+    }
+    else if ( strpos($content, "후문") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "후문에서 탑승 가능한 버스를 출력중입니다. "
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["강남08", "2415", "3011"]
+              }
+            }';
+    }
+    else if ( strpos($content, "143") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "탑승을 원하는 방향을 알려주세요! "
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["코엑스, 휘문중/고등학교, 은마아파트입구사거리, 대치역, 경기여고, 개포동 방면", "청담중/고등학교, 갤러리아, 압구정, 잠원, 신반포, 고속터미널 방면"]
+              }
+            }';
+    }
+    else if ( strpos($content, "청담중/고등학교, 갤러리아, 압구정, 잠원, 신반포, 고속터미널 방면") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "아직 준비중이에요! 잠시만요 :)"
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              }
+            }';
+    }
+    else if ( strpos($content, "코엑스, 휘문중/고등학교, 은마아파트입구사거리, 대치역, 경기여고, 개포동 방면") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "아직 준비중이에요! 잠시만요 :)"
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              }
+            }';
+    }
+    //143 end
+    //146 START
+    else if ( strpos($content, "146") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "탑승을 원하는 방향을 알려주세요! "
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["삼성역, 선릉역, 역삼역, 강남역 방면", "건대입구역, 화양동, 군자역, 면목동 (영동대교 경유) 방면"]
+              }
+            }';
+    }
+    else if ( strpos($content, "삼성역, 선릉역, 역삼역, 강남역 방면") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "아직 준비중이에요! 잠시만요 :)"
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              }
+            }';
+    }
+    else if ( strpos($content, "건대입구역, 화양동, 군자역, 면목동 (영동대교 경유) 방면") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "아직 준비중이에요! 잠시만요 :)"
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              }
+            }';
+    }
+    //146 end
+    //301 START
+    else if ( strpos($content, "301") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "탑승을 원하는 방향을 알려주세요! "
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["봉은사, 종합운동장, 잠실(롯데월드), 가락시장, 문정동 방면", "강남구청, 압구정, 옥수, DDP (동호대교 경유) 방면"]
+              }
+            }';
+    }
+    else if ( strpos($content, "봉은사, 종합운동장, 잠실(롯데월드), 가락시장, 문정동 방면") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "아직 준비중이에요! 잠시만요 :)"
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              }
+            }';
+    }
+    else if ( strpos($content, "강남구청, 압구정, 옥수, DDP (동호대교 경유) 방면") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "아직 준비중이에요! 잠시만요 :)"
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              }
+            }';
+    }
+    //301 end
+    //362 START
+    else if ( strpos($content, "362") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "탑승을 원하는 방향을 알려주세요! "
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["갤러리아, 압구정, 고속터미널, 여의도 방면", "봉은사, 종합운동장, 잠실(롯데월드), 가락시장, 위례신도시 방면"]
+              }
+            }';
+    }
+    else if ( strpos($content, "갤러리아, 압구정, 고속터미널, 여의도 방면") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "아직 준비중이에요! 잠시만요 :)"
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              }
+            }';
+    }
+    else if ( strpos($content, "봉은사, 종합운동장, 잠실(롯데월드), 가락시장, 위례신도시 방면") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "아직 준비중이에요! 잠시만요 :)"
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              }
+            }';
+    }
+    //362 end
+    //401 START
+    else if ( strpos($content, "401") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "탑승을 원하는 방향을 알려주세요! "
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["강남구청역, 논현역, 고속터미널, 서울도심(시내) 방면", "삼성역, 개포동, 일원동, 수서역SRT, 가락시장 방면"]
+              }
+            }';
+    }
+    else if ( strpos($content, "강남구청역, 논현역, 고속터미널, 서울도심(시내) 방면") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "아직 준비중이에요! 잠시만요 :)"
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              }
+            }';
+    }
+    else if ( strpos($content, "삼성역, 개포동, 일원동, 수서역SRT, 가락시장 방면") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "아직 준비중이에요! 잠시만요 :)"
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              }
+            }';
+    }
+    //401 end
+    //2413 start
+    else if ( strpos($content, "2413") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "탑승을 원하는 방향을 알려주세요! "
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["휘문중/고등학교, 대치역, 도곡역, 개포동 방면", "휘문중/고등학교, 대치역, 도곡역, 개포동 방면"]
+              }
+            }';
+    }
+    else if ( strpos($content, "휘문중/고등학교, 대치역, 도곡역, 개포동 방면") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "아직 준비중이에요! 잠시만요 :)"
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              }
+            }';
+    }
+    else if ( strpos($content, "휘문중/고등학교, 대치역, 도곡역, 개포동 방면") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "아직 준비중이에요! 잠시만요 :)"
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              }
+            }';
+    }
+    //2413 end
+    //2415 start
+    else if ( strpos($content, "2415 (정문)") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "탑승을 원하는 방향을 알려주세요! "
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["대치동(학원가), 대치역, 도곡역, 한티역 방면", "종합운동장, 신천, 잠실, 자양동 (잠실대교 경유) 방면"]
+              }
+            }';
+    }
+    else if ( strpos($content, "대치동(학원가), 대치역, 도곡역, 한티역 방면 (정문)") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "아직 준비중이에요! 잠시만요 :)"
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              }
+            }';
+    }
+    else if ( strpos($content, "종합운동장, 신천, 잠실, 자양동 (잠실대교 경유) 방면 (정문)") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "아직 준비중이에요! 잠시만요 :)"
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              }
+            }';
+    }
+    else if ( strpos($content, "2415 (후문)") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "탑승을 원하는 방향을 알려주세요! "
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["대치동(학원가), 대치역, 도곡역, 한티역 방면", "종합운동장, 신천, 잠실, 자양동 (잠실대교 경유) 방면"]
+              }
+            }';
+    }
+    else if ( strpos($content, "대치동(학원가), 대치역, 도곡역, 한티역 방면 (후문)") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "아직 준비중이에요! 잠시만요 :)"
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              }
+            }';
+    }
+    else if ( strpos($content, "종합운동장, 신천, 잠실, 자양동 (잠실대교 경유) 방면 (후문)") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "아직 준비중이에요! 잠시만요 :)"
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              }
+            }';
+    }
+    //2415 end
+    //3414 start
+    else if ( strpos($content, "3414") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "탑승을 원하는 방향을 알려주세요! "
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["강남구청역, 학동역, 논현역, 고속터미널 방면", "종합운동장, 신천, 잠실, 방이동 방면"]
+              }
+            }';
+    }
+    else if ( strpos($content, "강남구청역, 학동역, 논현역, 고속터미널 방면") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "아직 준비중이에요! 잠시만요 :)"
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              }
+            }';
+    }
+    else if ( strpos($content, "종합운동장, 신천, 잠실, 방이동 방면") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "아직 준비중이에요! 잠시만요 :)"
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              }
+            }';
+    }
+    //3414 end
+    //3426 start
+    else if ( strpos($content, "3426") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "탑승을 원하는 방향을 알려주세요! "
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["선릉역, 한티역, 개포동, 수서역SRT, 세곡동, 장지역 방면"]
+              }
+            }';
+    }
+    else if ( strpos($content, "선릉역, 한티역, 개포동, 수서역SRT, 세곡동, 장지역 방면") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "아직 준비중이에요! 잠시만요 :)"
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              }
+            }';
+    }
+    //3426 end
+    //4318 start
+    else if ( strpos($content, "4318") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "탑승을 원하는 방향을 알려주세요! "
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["삼성역, 아주초/중학교, 잠실역, 잠실나루역, 올림픽공원 방면", "청담중/고등학교, 압구정, 고속터미널, 반포, 이수, 사당 방면"]
+              }
+            }';
+    }
+    else if ( strpos($content, "삼성역, 아주초/중학교, 잠실역, 잠실나루역, 올림픽공원 방면") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "아직 준비중이에요! 잠시만요 :)"
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              }
+            }';
+    }
+    else if ( strpos($content, "청담중/고등학교, 압구정, 고속터미널, 반포, 이수, 사당 방면") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "아직 준비중이에요! 잠시만요 :)"
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              }
+            }';
+    }
+    //4318 end
+    //4419 start
+    else if ( strpos($content, "4419") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "탑승을 원하는 방향을 알려주세요! "
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["청담중/고등학교, 갤러리아, 압구정, 도산공원 방면", "삼성역, 학여울역, 수서역SRT, 성남(태평동, 중앙시장, 남한산성) 방면"]
+              }
+            }';
+    }
+    else if ( strpos($content, "청담중/고등학교, 갤러리아, 압구정, 도산공원 방면") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "아직 준비중이에요! 잠시만요 :)"
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              }
+            }';
+    }
+    else if ( strpos($content, "삼성역, 학여울역, 수서역SRT, 성남(태평동, 중앙시장, 남한산성) 방면") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "아직 준비중이에요! 잠시만요 :)"
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              }
+            }';
+    }
+    //4419 end
+    //G08 start
+    else if ( strpos($content, "강남08 (정문)") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "탑승을 원하는 방향을 알려주세요! "
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["코엑스, 삼성중앙역, 청담역, 강남구청역, 신사역 방면 (정문)"]
+              }
+            }';
+    }
+    else if ( strpos($content, "코엑스, 삼성중앙역, 청담역, 강남구청역, 신사역 방면 (정문)") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "아직 준비중이에요! 잠시만요 :)"
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              }
+            }';
+    }
+    else if ( strpos($content, "강남08 (후문)") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "탑승을 원하는 방향을 알려주세요! "
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["코엑스, 삼성중앙역, 청담역, 강남구청역, 신사역 방면 (후문)"]
+              }
+            }';
+    }
+    else if ( strpos($content, "코엑스, 삼성중앙역, 청담역, 강남구청역, 신사역 방면 (후문)") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "아직 준비중이에요! 잠시만요 :)"
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              }
+            }';
+    }
+    //G08 end
+    //N61 start
+    else if ( strpos($content, "N61") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "탑승을 원하는 방향을 알려주세요! 심야버스니 운행시간에 주의해 주세요 :)"
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["건대입구, 어린이대공원, 면목동, 상봉역KTX, 상계, 노원 방면", "건대입구, 어린이대공원, 면목동, 상봉역KTX, 상계, 노원 방면"]
+              }
+            }';
+    }
+    else if ( strpos($content, "건대입구, 어린이대공원, 면목동, 상봉역KTX, 상계, 노원 방면") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "아직 준비중이에요! 잠시만요 :)"
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              }
+            }';
+    }
+    else if ( strpos($content, "건대입구, 어린이대공원, 면목동, 상봉역KTX, 상계, 노원 방면") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "아직 준비중이에요! 잠시만요 :)"
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              }
+            }';
+    }
+    //n61 end
+    //3011 START
+    else if ( strpos($content, "3011") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "탑승을 원하는 방향을 알려주세요! "
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["은마아파트입구, 대치동, 개포동, 수서역SRT, 가락시장 방면", "강남구청역, 도산공원, 압구정, 한남동 방면"]
+              }
+            }';
+    }
+    else if ( strpos($content, "은마아파트입구, 대치동, 개포동, 수서역SRT, 가락시장 방면") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "아직 준비중이에요! 잠시만요 :)"
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              }
+            }';
+    }
+    else if ( strpos($content, "강남구청역, 도산공원, 압구정, 한남동 방면") !== false ) {
+        echo '{
+              "message" :
+              {
+                "text" : "아직 준비중이에요! 잠시만요 :)"
+              },
+              "keyboard" :
+              {
+                "type" : "buttons",
+                "buttons" : ["급식 식단", "시간표", "학사력", "교통정보", "날씨", "개발자"]
+              }
+            }';
+    }
+    //3011 end
+    //bus end
+
 else{
     echo '{
           "message" :
