@@ -1,5 +1,5 @@
 <?php
-function cal($req)
+function calweek($req)
 {
   $init = date("W");
   $week = intval($init) + intval($req);
